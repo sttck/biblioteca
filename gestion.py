@@ -44,4 +44,12 @@ class Biblioteca:
                 print(f"  Fecha de entrega: {renta['dia_entrega']}/{renta['mes_entrega']}")
                 print(f"  Costo: ${renta['costo']:.2f}")
 
-    
+    def eliminar_renta(self):
+        libro = input("Ingrese el nombre del libro a eliminar: ")
+        for renta in self.rentas:
+            if renta["libro"] == libro:
+                self.rentas.remove(renta)
+                self.libros_prestados.remove(libro)
+                print(f"La renta del libro '{libro}' ha sido eliminada.")
+                return
+        print(f"No se encontró ninguna renta del libro '{libro}'.")
