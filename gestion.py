@@ -53,3 +53,18 @@ class Biblioteca:
                 print(f"La renta del libro '{libro}' ha sido eliminada.")
                 return
         print(f"No se encontró ninguna renta del libro '{libro}'.")
+
+    def editar_renta(self):
+        libro = input("Ingrese el nombre del libro a editar: ")
+        for renta in self.rentas:
+            if renta["libro"] == libro:
+                print("Ingrese los nuevos datos:")
+                renta["usuario"] = input("Nuevo nombre del usuario: ")
+                renta["dia_pedido"] = int(input("Nuevo día del pedido: "))
+                renta["mes_pedido"] = int(input("Nuevo mes del pedido: "))
+                renta["dia_entrega"] = int(input("Nuevo día de entrega: "))
+                renta["mes_entrega"] = int(input("Nuevo mes de entrega: "))
+                renta["costo"] = float(input("Nuevo costo del préstamo: "))
+                print(f"Renta actualizada: {renta}")
+                return
+        print(f"No se encontró ninguna renta del libro '{libro}'.")
