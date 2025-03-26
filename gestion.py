@@ -32,3 +32,16 @@ class Biblioteca:
         self.libros_prestados.append(libro)
         print(f"Renta agregada: {renta}")
         
+    def mostrar_rentas(self):
+        if not self.rentas:
+            print("No hay rentas registradas.")
+        else:
+            for i, renta in enumerate(self.rentas, 1):
+                print(f"\nRenta {i}:")
+                print(f"  Usuario: {renta['usuario']}")
+                print(f"  Libro: {renta['libro']}")
+                print(f"  Fecha del pedido: {renta['dia_pedido']}/{renta['mes_pedido']}")
+                print(f"  Fecha de entrega: {renta['dia_entrega']}/{renta['mes_entrega']}")
+                print(f"  Costo: ${renta['costo']:.2f}")
+
+    
