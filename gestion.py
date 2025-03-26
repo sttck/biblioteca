@@ -68,3 +68,29 @@ class Biblioteca:
                 print(f"Renta actualizada: {renta}")
                 return
         print(f"No se encontró ninguna renta del libro '{libro}'.")
+
+biblioteca = Biblioteca()
+## menú para la biblioteca, paara utilizar todo lo de antes
+while True:
+    print("\n--- Menú ---")
+    print("1. Agregar renta")
+    print("2. Mostrar rentas")
+    print("3. Eliminar renta")
+    print("4. Editar renta")
+    print("5. Salir")
+
+    opcion = input("Seleccione una opción: ")
+
+    if opcion == "1":
+        biblioteca.agregar_renta()
+    elif opcion == "2":
+        biblioteca.mostrar_rentas()
+    elif opcion == "3":
+        biblioteca.eliminar_renta()
+    elif opcion == "4":
+        biblioteca.editar_renta()
+    elif opcion == "5":
+        print("¡Adiós!")
+        break
+    else:
+        print("Opción no válida. Intente de nuevo.")
