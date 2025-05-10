@@ -1,6 +1,6 @@
 
 class Biblioteca:
-    def _init_(self):
+    def __init__(self):
         self.rentas = []
         self.libros_prestados = []
 
